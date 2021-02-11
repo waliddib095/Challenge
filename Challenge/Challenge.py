@@ -68,7 +68,6 @@ Code Explanation (Dynamic Programming):
             
         
 # Main code      
-    
 triangle = open("triangle.txt", "r")
 
 max_total(triangle)
