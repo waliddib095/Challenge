@@ -1,15 +1,12 @@
 def max_total(file1):
     
-    
     lines = file1.readlines()   #read all lines
-    
     triangle_matrix = []   #initiate triangle matrix
     
     for line in lines:
         row = line.strip().split()
         triangle_matrix.append(row)   #populate triangle matrix
-        
-        
+      
     num_of_lines = len(triangle_matrix)   # get number of lines
     
     for row in range(num_of_lines - 2, -1, -1):
@@ -24,15 +21,14 @@ def max_total(file1):
             # Edge case: if triangle has 1 line, print the element
             
             triangle_matrix[row][col] = int(triangle_matrix[row][col])
-            
+
             # Turn char to int
             
             element_1 = int(triangle_matrix[row + 1][col])
-            
             element_2 = int(triangle_matrix[row + 1][col + 1])
             
             # get bottom left and bottom right elements
-            
+
             triangle_matrix[row][col] += max(element_1, element_2)  
             
             # add the value of current element to maximum of bot elements
